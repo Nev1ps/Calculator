@@ -16,8 +16,8 @@ public class Calc {
             char op = parts[1].charAt(0);
             int b = Integer.parseInt(parts[2]);
 
-            if (a > 10 || b > 10) {
-                throw new IllegalArgumentException("Вводимое число больше 10");
+            if (a < 1 || a > 10 || b < 1 || b > 10) {
+                throw new IllegalArgumentException("Вводимое число должно быть от 1 до 10");
             }
             int result;
             switch (op) {
